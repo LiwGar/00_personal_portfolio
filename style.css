@@ -54,6 +54,7 @@ body {
 /* Home - Section*/
 .home {
     height: 100vh;
+    background: url('') no-repeat;
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -62,7 +63,7 @@ body {
 /* Contenido de Home - Section */
 .home_Content {
     background: transparent;
-    max-width: 600px; 
+    max-width: 600px;
 }
 
 /* H1 del Contenido del Home */
@@ -153,6 +154,58 @@ color: #00abf0;
     width: 100%;
 
 }
+
+/* Caja de Botones de Socials*/
+.home_Socials {
+    position: absolute;
+    bottom: 36px;
+    width: 170px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.home_Socials a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home_Socials a:hover {
+    color: #081b29;
+}
+
+
+.home_Socials a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s; 
+}
+
+.home_Socials a:hover::before {
+    width: 100%;
+}
+
+
 
 
 
