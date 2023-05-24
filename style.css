@@ -21,12 +21,12 @@
     --main-color: #00abf0;
 }
 
-hmtl {
+html {
     font-size: 62.5%;
     overflow-x: hidden;
 }
 
-
+ 
 /* Body */
 body {
     background: var(--bg-color);
@@ -40,7 +40,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.0rem 10%;
+    padding: 2rem 7%;
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -48,23 +48,22 @@ body {
     z-index: 100;
 }
 
-
+ 
 /* Logo Header */
 .header_Logo {
-    font-size: 1.6rem;
+    font-size: 2.5rem;
     color: var(--text-color);
-    text-decoration: none;
     font-weight: 600;  
 }
 
 
 /* Elementos de Nav-Bar */
 .nav_Bar a {
-    font-size: 1.0rem;
+    font-size: 1.6rem;
     color: var(--text-color);
     text-decoration: none; 
     font-weight: 500;
-    margin-left: 2.2rem;
+    margin-left: 3.5rem;
     transition: .3s;
 }
 
@@ -75,124 +74,139 @@ body {
 
 
 /* Menu Icon (header) */
-#menu_icon {
-    font-size: 2.0rem;
+#menu_Icon {
+    font-size: 3.6rem;
     color: var(--text-color);
     cursor: pointer;
-    display: none ;
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
 }
 
 
 /* Home - Section*/
 .home {
-    height: 100vh;
-    background: url('') no-repeat;
     display: flex;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 7%;
+    background: url('./images/Background_Portfolio.png') no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+
 
 /* Contenido de Home - Section */
 .home_Content {
-    background: transparent;
-    max-width: 600px;
+    max-width: 60rem;
 }
+
 
 /* H1 del Contenido del Home */
 .home_Content h1 {
-    font-size: 36px;
+    font-size: 4.6rem;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.0;
+}
+
+
+/* Text Animate (section)*/
+.home_Content .text_Animate {
+    position: relative;
+    width: 32.8rem;
+}
+
+
+/* H3 del Contenido del Home */
+.home_Content .text_Animate h3 {
+    font-size: 2.8rem;
+    font-weight:  700;
+    color: transparent;
+    -webkit-text-stroke: .8px var(--main-color);
 }
 
 .home_Content h1::first-line {
-color: #00abf0;
+color: var(--main-color);
 }
 
-/* H3 del Contenido del Home */
-.home_Content h3 {
-    font-size: 22px;
-    font-weight: 700;
-    color: #00abf0;
-}
 
 /* P del Contenido del Home */
 .home_Content p {
-    font-size: 14px;
-    margin: 16px 0 40px;
+    font-size: 1.4rem;
+    margin: 1rem 0 6rem; 
 }
 
 /* Caja de los Botones */
-.home_Content .btn_Box {
+.btn_Box {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    width: 345px;
-    height: 50px;
-    background: transparent;
+    width: 34.5rem;
+    height: 5rem;
 }
 
 /* Botones de Section */
-.btn_Box a {
+.btn_Box .btn {
     position: relative;
     display: inline-flex; 
     justify-content: center;
     align-items: center; 
-    width: 150px;
+    width: 15rem;
     height: 100%;
-    background: #00abf0;
-    border: 2px solid #00abf0;
-    border-radius: 8px;
-    font-size: 18px;
-    color: #081b29;
-    text-decoration: none;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.8rem;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
     z-index: 1;
     overflow: hidden;
     transition: .5s;
 }
 
-.btn_Box a:nth-child(2) {
-    background: transparent;
-    color: #00abf0;
+.btn_Box .btn:hover {
+    color: var(--main-color);
 }
 
-.btn_Box a::before {
+.btn_Box .btn:nth-child(2) {
+    background: transparent;
+    color: var(--main-color); 
+}
+
+.btn_Box .btn:nth-child(2):hover {
+    color: var(--bg-color);
+}
+
+.btn_Box .btn:nth-child(2)::before {
+    background: var(--main-color);
+}
+
+.btn_Box .btn::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
     height: 100%;
-    background: #081b29;
+    background: var(--bg-color);
     z-index: -1;
     transition: .5s;
     
 }
 
-.btn_Box a:hover {
-    color: #00abf0;
-}
-
-.btn_Box a:nth-child(2):hover {
-    color: #081b29;
-}
-
-.btn_Box a:nth-child(2)::before {
-    background: #00abf0;
-}
-
-.btn_Box a:hover::before {
+.btn_Box .btn:hover::before {
     width: 100%;
-
 }
+
 
 /* Caja de Botones de Socials*/
 .home_Socials {
     position: absolute;
-    bottom: 36px;
+    bottom: 4rem;
     width: 170px;
-    background: transparent;
     display: flex;
     justify-content: space-between;
 
@@ -206,18 +220,17 @@ color: #00abf0;
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #00abf0;
+    border: .2rem solid var(--main-color );
     border-radius: 50%;
     font-size: 20px;
-    color: #00abf0;
-    text-decoration: none;
+    color: var(--main-color);
     z-index: 1;
     overflow: hidden;
     transition: .5s;
 }
 
 .home_Socials a:hover {
-    color: #081b29;
+    color: var(--bg-color);
 }
 
 
@@ -228,7 +241,7 @@ color: #00abf0;
     left: 0;
     width: 0;
     height: 100%;
-    background: #00abf0;
+    background: var(--main-color);
     z-index: -1;
     transition: .5s; 
 }
