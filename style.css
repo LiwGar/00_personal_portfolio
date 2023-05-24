@@ -15,11 +15,12 @@
 
 /* Colors Variables */
 :root {
-    --bg-color: #081b29;
-    --second-bg-color: #112e42;
+    --bg-color: #0f054cff;
+    --second-bg-color: #cdccf8ff;
     --text-color: #ededed;
+    --second-text-color: #0f054cff;
+    --third-text-color: #463c9fff;
     --main-color: #00abf0;
-    --special-color: #0f054cff;
 }
 
 html {
@@ -82,6 +83,8 @@ body {
     display: none;
 }
 
+
+/* General Home Section */
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
@@ -136,17 +139,19 @@ color: var(--main-color);
 /* P del Contenido del Home */
 .home_Content p {
     font-size: 1.4rem;
-    margin: 1rem 0 6rem; 
+    margin: 1rem 0 2rem; 
 }
+
 
 /* Caja de los Botones */
 .btn_Box {
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: 34.5rem;
+    width: 34rem;
     height: 5rem;
 }
+
 
 /* Botones de Section */
 .btn_Box .btn {
@@ -251,24 +256,108 @@ color: var(--main-color);
     width: 100%;
 }
 
+
 /* Efecto pa background */
 
 .home_ImageHover {
     position: absolute;
     top: 0;
     right: 0;
-    width: 70%;
+    width: 58%;
     height: 100%;
     background: transparent; 
     transition: 3s;
 }
 
 .home_ImageHover:hover {
-    background: var(--special-color);
+    background: var(--bg-color);
     opacity: .8;
 }
 
 
+/* General About Section */
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--second-bg-color);
+    color: var(--second-text-color);
+    padding-bottom: 6rem;
+}
+
+
+/* About Title */
+.about_Heading {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
+span {
+    color: var(--third-text-color);
+}
+
+
+/* About Image */
+.about_Image {
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+    margin-bottom: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_Image img {
+    width: 100%;
+    /*border-radius: 50%;
+    border: .2rem solid var(--main-color);*/
+}
+
+/*
+.about_Image .circle_Spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid var(--second-bg-color);
+    border-bottom: .2rem solid var(--second-bg-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+}  */
+
+
+/* Content About Me */
+.about_Content {
+    text-align: center;
+}
+
+.about_Content h3 {
+    font-size: 2.6rem;
+}
+
+.about_Content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.btn_Box.buttons {
+    display: inline-block;
+    width: 15rem;
+}
+
+.btn_Box.buttons a::before {
+    background: var(--bg-color);
+}
 
 
 
