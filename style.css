@@ -19,6 +19,7 @@
     --second-bg-color: #112e42;
     --text-color: #ededed;
     --main-color: #00abf0;
+    --special-color: #0f054cff;
 }
 
 html {
@@ -248,6 +249,23 @@ color: var(--main-color);
 
 .home_Socials a:hover::before {
     width: 100%;
+}
+
+/* Efecto pa background */
+
+.home_ImageHover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background: transparent; 
+    transition: 3s;
+}
+
+.home_ImageHover:hover {
+    background: var(--special-color);
+    opacity: .8;
 }
 
 
