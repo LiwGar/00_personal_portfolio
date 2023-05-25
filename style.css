@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    border: none;
+    border: none; 
     outline: none;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
@@ -17,6 +17,8 @@
 :root {
     --bg-color: #0f054cff;
     --second-bg-color: #cdccf8ff;
+    --third-bg-color: rgb(8, 3, 40);
+    --fourth-bg-color:  rgb(148, 148, 181);
     --text-color: #ededed;
     --second-text-color: #0f054cff;
     --third-text-color: #463c9fff;
@@ -31,7 +33,7 @@ html {
  
 /* Body */
 body {
-    background: var(--bg-color);
+    background: var(--second-bg-color);
     color: var(--text-color);
 }
 
@@ -296,8 +298,7 @@ span {
     align-items: center;
     flex-direction: column;
     min-height: auto;
-    padding-bottom: 5rem;
-    background-color: var(--second-bg-color);
+    padding-bottom: 7rem;
     color: var(--second-text-color);
 }
 
@@ -347,22 +348,22 @@ span {
 }
 
 
-/* Efect content */ /*
+/* Efect content */
 .education_Content .content::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 0;
     height: 100%;
-    background: yellowgreen;
+    background: var(--fourth-bg-color); 
     z-index: -1;
     transition: .5s;
 }
 
 .education_Content .content:hover::before {
     width: 100%;
-} */
+}
 
 .education_Content .content .year {
     font-size: 1.5rem;
@@ -382,6 +383,108 @@ span {
 }
 
 
+/* SKILLS SECTION DESIGN */
+.skills {
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: var(--bg-color);
+}
+
+.skills .skills_Row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.skills_Row .skills_Column {
+    flex: 1 1 40rem;
+}
+
+.skills_Column .title {
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+}
+
+.skills_Box .skills_Content {
+    position: relative;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    padding: .5rem 1.5rem;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.skills_Box .skills_Content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--third-bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.skills_Box .skills_Content:hover::before {
+    width: 100%;
+} 
+
+.skills_Content .progress {
+    padding: 1rem 0;
+}
+
+.skills_Content .progress h3 {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills_Content .progress h3 span {
+    color: var(--text-color);
+}
+
+/* Creacion de la barra de carga que tendra cada skill*/
+.skills_Content .progress .bar {
+    height: 2.5rem;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+    padding: .5rem;
+    margin: 1rem 0;
+}
+
+/* Creacion del contenido o relleno de cada barra del skill */
+.skills_Content .progress .bar span {
+    display: block;
+    height: 100%;
+    border-radius: .3rem;
+    background: var(--main-color);
+}
+
+/*Efectos para personalizar el relleno de cada skill*/
+.skills_Column:nth-child(1)  .skills_Content .progress:nth-child(1) .bar span {
+    width: 90%;
+}
+
+.skills_Column:nth-child(1)  .skills_Content .progress:nth-child(2) .bar span {
+    width: 80%;
+}
+
+.skills_Column:nth-child(1)  .skills_Content .progress:nth-child(3) .bar span {
+    width: 50%;
+}
+
+.skills_Column:nth-child(2)  .skills_Content .progress:nth-child(1) .bar span {
+    width: 75%;
+}
+
+.skills_Column:nth-child(2)  .skills_Content .progress:nth-child(2) .bar span {
+    width: 80%;
+}
+
+.skills_Column:nth-child(2)  .skills_Content .progress:nth-child(3) .bar span {
+    width: 75%;
+}
 
 
 /* ABOUT SECTION DESIGN */
@@ -392,9 +495,8 @@ span {
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-    background: var(--second-bg-color);
     color: var(--second-text-color);
-    padding-bottom: 6rem;
+    padding-bottom: 7rem;
 }
 
 /* About Image */
@@ -416,7 +518,7 @@ span {
     border: .2rem solid var(--main-color);*/
 }
 
-/*
+/* esto es para un circulo alrededor de la foto de about
 .about_Image .circle_Spin {
     position: absolute;
     top: 50%;
@@ -459,6 +561,11 @@ span {
     color: var(--second-text-color)
 }
 
+
+/* CONTACT SECTION DESIGN */
+.contact {
+    background: var(--bg-color);
+}
 
 
 
