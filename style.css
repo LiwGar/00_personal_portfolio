@@ -20,7 +20,7 @@
     --text-color: #ededed;
     --second-text-color: #0f054cff;
     --third-text-color: #463c9fff;
-    --main-color: #00abf0;
+    --main-color: #04a2a7fe;
 }
 
 html {
@@ -36,7 +36,8 @@ body {
 }
 
 
-/* Header General*/
+/* HEADER SECTION DESIGN */
+
 .header {
     position: fixed;
     top: 0;
@@ -49,17 +50,17 @@ body {
     align-items: center;
     z-index: 100;
 }
-
  
 /* Logo Header */
+
 .header_Logo {
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;  
 }
 
-
 /* Elementos de Nav-Bar */
+
 .nav_Bar a {
     font-size: 1.6rem;
     color: var(--text-color);
@@ -74,8 +75,8 @@ body {
     color: var(--main-color);
 }
 
-
 /* Menu Icon (header) */
+
 #menu_Icon {
     font-size: 3.6rem;
     color: var(--text-color);
@@ -84,14 +85,15 @@ body {
 }
 
 
-/* General Home Section */
+/* HOME SECTION DESIGN */
+
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
 
-
 /* Home - Section*/
+
 .home {
     display: flex;
     align-items: center;
@@ -101,29 +103,29 @@ section {
     background-position: center;
 }
 
-
 /* Contenido de Home - Section */
+
 .home_Content {
     max-width: 60rem;
 }
 
-
 /* H1 del Contenido del Home */
+
 .home_Content h1 {
     font-size: 4.6rem;
     font-weight: 700;
     line-height: 1.0;
 }
 
-
 /* Text Animate (section)*/
+
 .home_Content .text_Animate {
     position: relative;
     width: 32.8rem;
 }
 
-
 /* H3 del Contenido del Home */
+
 .home_Content .text_Animate h3 {
     font-size: 2.8rem;
     font-weight:  700;
@@ -135,15 +137,15 @@ section {
 color: var(--main-color);
 }
 
-
 /* P del Contenido del Home */
+
 .home_Content p {
     font-size: 1.4rem;
     margin: 1rem 0 2rem; 
 }
 
-
 /* Caja de los Botones */
+
 .btn_Box {
     position: relative;
     display: flex;
@@ -152,8 +154,8 @@ color: var(--main-color);
     height: 5rem;
 }
 
-
 /* Botones de Section */
+
 .btn_Box .btn {
     position: relative;
     display: inline-flex; 
@@ -207,15 +209,14 @@ color: var(--main-color);
     width: 100%;
 }
 
-
 /* Caja de Botones de Socials*/
+
 .home_Socials {
     position: absolute;
     bottom: 4rem;
     width: 170px;
     display: flex;
     justify-content: space-between;
-
 }
 
 .home_Socials a {
@@ -239,7 +240,6 @@ color: var(--main-color);
     color: var(--bg-color);
 }
 
-
 .home_Socials a::before {
     content: '';
     position: absolute;
@@ -256,8 +256,7 @@ color: var(--main-color);
     width: 100%;
 }
 
-
-/* Efecto pa background */
+/* Efect to background */
 
 .home_ImageHover {
     position: absolute;
@@ -275,7 +274,117 @@ color: var(--main-color);
 }
 
 
-/* General About Section */
+
+/* TITLES */
+
+.heading {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+span {
+    color: var(--third-text-color);
+}
+
+
+/* EDUCATION SECTION DESIGN */
+
+.education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+    background-color: var(--second-bg-color);
+    color: var(--second-text-color);
+}
+
+.education .education_Row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.education_Row .education_Column {
+    flex: 1 1 40rem;
+}
+
+.education_Column .title {
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.education_Column .education_Box {
+    border-left: .2rem solid var(--main-color);
+}
+
+.education_Box .education_Content {
+    position: relative;
+    padding-left: 2rem;
+}
+
+/* Point Efect */
+.education_Box .education_Content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+
+.education_Content .content {
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+
+/* Efect content */ /*
+.education_Content .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: yellowgreen;
+    z-index: -1;
+    transition: .5s;
+}
+
+.education_Content .content:hover::before {
+    width: 100%;
+} */
+
+.education_Content .content .year {
+    font-size: 1.5rem;
+    padding-bottom: .5rem;    
+}
+
+.education_Content .content .year i {
+    padding-right: .5rem;
+}
+
+.education_Content .content h3 {
+    font-size: 2rem;
+}
+
+.education_Content .content p {
+    font-size: 1.6rem;
+}
+
+
+
+
+/* ABOUT SECTION DESIGN */
 
 .about {
     display: flex;
@@ -288,21 +397,8 @@ color: var(--main-color);
     padding-bottom: 6rem;
 }
 
-
-/* About Title */
-.about_Heading {
-    font-size: 5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-
-span {
-    color: var(--third-text-color);
-}
-
-
 /* About Image */
+
 .about_Image {
     position: relative;
     width: 30rem;
@@ -335,8 +431,8 @@ span {
     border-right: .2rem solid var(--main-color);
 }  */
 
-
 /* Content About Me */
+
 .about_Content {
     text-align: center;
 }
@@ -356,10 +452,12 @@ span {
 }
 
 .btn_Box.buttons a::before {
-    background: var(--bg-color);
+    background: var(--second-bg-color);    
 }
 
-
+.btn_Box.buttons a:hover {
+    color: var(--second-text-color)
+}
 
 
 
