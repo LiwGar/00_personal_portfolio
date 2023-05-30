@@ -843,8 +843,30 @@ hay que quitar el background de about.
     .home {
         justify-content: center;
     }
+
+    .home_Content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin-top: -4rem;
+    }
+
+    .home_Content p {
+        text-align: justify;
+        margin-top: 2rem;
+    }
+
     .home_Content h1 {
         font-size: 5.2rem;
+    }
+
+    .home_Content h1::first-line {
+        color: var(--main-color);
+    }
+    
+    .home_Content .btn_Box {
+        margin-top: 2rem;
     }
 
     .education {
@@ -883,6 +905,7 @@ hay que quitar el background de about.
     .home_Content h1::first-line {
         color: var(--main-color);
     }
+
     .footer_Text {
         text-align: center;
     }
