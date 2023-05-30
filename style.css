@@ -20,9 +20,9 @@
     --fourth-bg-color:  #9494b5;
     --text-color: #ededed;
     --second-text-color: #0f054cff;
-    --third-text-color: #463c9fff;
+    --third-text-color: #5561BE;
     --fourth-text-color:  #9f9fb181;
-    --main-color: #04a2a7fe;
+    --main-color: #08e6ea;
 }
 
 html {
@@ -50,19 +50,24 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    transition: .5s;
 }
 
-/* Logo Header */
+/* //scroll sections //sticky header */
+.header.sticky {
+    background: var(--bg-color);
+}
 
+
+
+/* Logo Header */
 .header_Logo {
     font-size: 2.5rem;
     color:var(--text-color);
     font-weight: 600;
-      
 }
 
 /* Elementos de Nav-Bar */
-
 .nav_Bar a {
     font-size: 1.6rem;
     color: var(--text-color);
@@ -78,7 +83,6 @@ body {
 }
 
 /* Menu Icon (header) */
-
 #menu_Icon {
     font-size: 3.6rem;
     color: var(--text-color);
@@ -95,7 +99,6 @@ section {
 }
 
 /* Home - Section*/
-
 .home {
     display: flex;
     align-items: center;
@@ -106,13 +109,12 @@ section {
 }
 
 /* Contenido de Home - Section */
-
 .home_Content {
     max-width: 60rem;
+    z-index: 99;
 }
 
 /* H1 del Contenido del Home */
-
 .home_Content h1 {
     font-size: 4.6rem;
     font-weight: 700;
@@ -120,14 +122,12 @@ section {
 }
 
 /* Text Animate (section)*/
-
 .home_Content .text_Animate {
     position: relative;
     width: 32.8rem;
 }
 
 /* H3 del Contenido del Home */
-
 .home_Content .text_Animate h3 {
     font-size: 2.8rem;
     font-weight:  700;
@@ -141,14 +141,12 @@ color: var(--main-color);
 }
 
 /* P del Contenido del Home */
-
 .home_Content p {
     font-size: 1.4rem;
     margin: 1rem 0 2rem; 
 }
 
 /* Caja de los Botones */
-
 .btn_Box {
     position: relative;
     display: flex;
@@ -158,7 +156,6 @@ color: var(--main-color);
 }
 
 /* Botones de Section */
-
 .btn_Box .btn {
     position: relative;
     display: inline-flex; 
@@ -213,7 +210,6 @@ color: var(--main-color);
 }
 
 /* Caja de Botones de Socials*/
-
 .home_Socials {
     position: absolute;
     bottom: 4rem;
@@ -260,7 +256,6 @@ color: var(--main-color);
 }
 
 /* Efect to background */
-
 .home_ImageHover {
     position: absolute;
     top: 0;
@@ -311,10 +306,7 @@ span {
 }
 
 .education_Row .education_Column {
-    flex: 1 1 40rem;
-    column-count: 2;
-    column-gap: 3rem;
-    
+    flex: 1 1 40rem;    
 }
 
 .education_Row .education_Column .title {
@@ -325,7 +317,7 @@ span {
 }
 
 .education_Column .education_Box {
-    border-left: .2rem solid var(--main-color);
+    border-left: .2rem solid var(--third-text-color);
 }
 
 .education_Box .education_Content {
@@ -339,16 +331,16 @@ span {
     position: absolute;
     top: 0;
     left: -1.1rem;
-    width: 2rem;
+    width: 1rem;
     height: 2rem;
-    background: var(--main-color);
-    border-radius: 50%;
+    background: var(--third-text-color);
+    border-radius: 20%;
 }
 
 .education_Content .content {
     position: relative;
     padding: 1.5rem;
-    border: .2rem solid var(--main-color);
+    border: .2rem solid var(--bg-color);
     border-radius: .6rem;
     margin-bottom: 2rem;
     overflow: hidden;
@@ -451,39 +443,48 @@ span {
 
 /* Efectos para logos de cada education */
 .skills_Content .progress #html5 {
-    margin-top: 0.2rem;
-    margin-left: -52.1rem;
-    font-size: 2.0rem;
+    margin-block-end: auto;
+    margin-inline-end: auto;
+    margin-left: -7.8rem;
+    font-size: 2.4rem;
+
 }
 
 .skills_Content .progress #css3 {
-    margin-top: 0.2rem;
-    margin-left: -50.8rem;
-    font-size: 2.0rem;
+    margin-block-end: auto;
+    margin-inline-end: auto;
+    margin-left: -6.6rem;
+    font-size: 2.4rem;
 }
 
 .skills_Content .progress #javas {
-    margin-top: 0.2rem;
-    margin-left: -56.6rem;
-    font-size: 2.0rem;
+    margin-block-end: auto;
+    margin-inline-end: auto;
+    margin-left: -12.6rem;
+    font-size: 2.4rem;
+
 }
 
 .skills_Content .progress #git {
-    margin-top: 0.2rem;
-    margin-left: -50rem;
-    font-size: 2.0rem;
+    margin-block-end: auto;
+    margin-inline-end: auto;
+    margin-left: -5.9rem;
+    font-size: 2.4rem;
+
 }
 
 .skills_Content .progress #github {
-    margin-top: 0.2rem;
-    margin-left: -53rem;
-    font-size: 2.0rem;
+    margin-block-end: auto;
+    margin-inline-end: auto;
+    margin-left: -9.1rem;
+    font-size: 2.4rem;
 }
 
 .skills_Content .progress #cmd {
-    margin-top: 0.2rem;
-    margin-left: -66.8rem;
-    font-size: 2.0rem;
+    margin-block-end: auto;
+    margin-inline-end: auto;
+    margin-left: -22.7rem;
+    font-size: 2.4rem;
 }
 
 .skills_Content .progress h3 span {
@@ -509,7 +510,7 @@ span {
 
 /*Efectos para personalizar el relleno de cada skill*/
 .skills_Column:nth-child(1)  .skills_Content .progress:nth-child(1) .bar span {
-    width: 90%;
+    width:90%;
 }
 
 .skills_Column:nth-child(1)  .skills_Content .progress:nth-child(2) .bar span {
@@ -520,15 +521,15 @@ span {
     width: 50%;
 }
 
-.skills_Column:nth-child(2)  .skills_Content .progress:nth-child(1) .bar span {
+.skills_Column:nth-child(1)  .skills_Content .progress:nth-child(4) .bar span {
     width: 75%;
 }
 
-.skills_Column:nth-child(2)  .skills_Content .progress:nth-child(2) .bar span {
+.skills_Column:nth-child(1)  .skills_Content .progress:nth-child(5) .bar span {
     width: 80%;
 }
 
-.skills_Column:nth-child(2)  .skills_Content .progress:nth-child(3) .bar span {
+.skills_Column:nth-child(1)  .skills_Content .progress:nth-child(6) .bar span {
     width: 75%;
 }
 
@@ -546,7 +547,6 @@ span {
 }
 
 /* About Image */
-
 .about_Image {
     position: relative;
     width: 30rem;
@@ -580,7 +580,6 @@ span {
 }  */
 
 /* Content About Me */
-
 .about_Content {
     text-align: center;
 }
@@ -600,11 +599,11 @@ span {
 }
 
 .btn_Box.buttons a::before {
-    background: var(--second-bg-color);    
+    background: var(--bg-color);    
 }
 
 .btn_Box.buttons a:hover {
-    color: var(--second-text-color)
+    color: var(--main-color);
 }
 
 
@@ -686,6 +685,9 @@ hay que quitar el background de about.
     cursor: pointer;
 }
 
+
+/* FOOTER DESIGN */
+
 .footer {
     display: flex;
     justify-content: space-between;
@@ -696,11 +698,10 @@ hay que quitar el background de about.
     background: var(--bg-color);
 }
 
-.footer_BtnToTop a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+.footer .footer_Text a {
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    color: var(--third-text-color)
 
 }
 
@@ -744,3 +745,147 @@ hay que quitar el background de about.
     width: 100%;
 }
 
+
+/* RESPONSIVE DESIGN */
+
+@media (min-width: 540) {
+    .education .education_Row .education_Column .education_Box {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .home_ImageHover {
+        display: none;
+    }
+}
+
+@media (max-width: 994px) {
+    .header {
+        padding: 2rem 4%;
+    }
+
+    .home_ImageHover {
+        display: none;
+    }
+
+    section {
+        padding: 10rem 4% 2rem;
+    }
+
+    .home {
+        padding: 0 4%
+    }
+
+    .footer {
+        padding: 2rem 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        background: var(--bg-color);
+    }
+
+    #menu_Icon {
+        display: block;
+    }
+
+    .nav_Bar {
+        position: absolute;
+        top: 100%;
+        left: -100%;/*2*/
+        width: 100%;
+        padding: 1rem 4%;
+        background: var(--bg-color);
+        box-shadow: 0 .5rem 1rem var(--main-color);
+        transition: .25s ease; /*3*/
+        transition-delay: .25s; /*4*/
+    }
+
+    .nav_Bar.active {
+        left: 0; /*1*/
+        transition-delay: 0s;
+    }
+
+    .nav_Bar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .footer_BtnToTop a {
+        margin-top: 2rem;
+        position: relative;
+    }
+}
+
+@media (max-width: 540px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home_Socials {
+        width: 160px;
+    }
+
+    .home_Socials a {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (max-width: 462px) {
+    .home {
+        justify-content: center;
+    }
+    .home_Content h1 {
+        font-size: 5.2rem;
+    }
+
+    .education {
+        padding: 10rem 4% 5rem 5%;
+    }
+
+    .contact form .input_Box .input_Field {
+        width: 100%;
+    }
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer .footer_Text {
+        margin-top: 3rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 372px) {
+    .home {
+        justify-content: center;
+    }
+
+    .home_Content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home_Content p {
+        text-align: justify;
+    }
+
+    .home_Content h1::first-line {
+        color: var(--main-color);
+    }
+    .footer_Text {
+        text-align: center;
+    }
+
+}
+/* 01:40:00*/
