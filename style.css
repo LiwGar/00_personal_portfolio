@@ -14,14 +14,11 @@
 
 /* Colors Variables */
 :root {
-    --bg-color: #0f054cff;
-    --second-bg-color: #cdccf8ff;
-    --third-bg-color: #080328;
-    --fourth-bg-color:  #9494b5;
-    --text-color: #ededed;
-    --second-text-color: #0f054cff;
-    --third-text-color: #5561BE;
-    --fourth-text-color:  #9f9fb181;
+    --bg-color: #1e1e20;
+    --second-bg-color: #171717;
+    --third-bg-color: #27272a;
+    --text-color: #ededed;  
+    --second-text-color:  #9f9fb181;
     --main-color: #08e6ea;
 }
 
@@ -32,7 +29,7 @@ html {
 
 /* Body */
 body {
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     color: var(--text-color);
 }
 
@@ -55,22 +52,22 @@ body {
 
 /* //scroll sections //sticky header */
 .header.sticky {
-    background: var(--bg-color);
+    background: var(--second-bg-color);
 }
 
 
 
 /* Logo Header */
 .header_Logo {
-    font-size: 2.5rem;
-    color:var(--text-color);
+    font-size: 2.2rem;
+    color:var(--main-color);
     font-weight: 600;
 }
 
 /* Elementos de Nav-Bar */
 .nav_Bar a {
-    font-size: 1.6rem;
-    color: var(--text-color);
+    font-size: 1.4rem;
+    color: var(--second-text-color);
     text-decoration: none; 
     font-weight: 500;
     margin-left: 3.5rem;
@@ -85,7 +82,7 @@ body {
 /* Menu Icon (header) */
 #menu_Icon {
     font-size: 3.6rem;
-    color: var(--text-color);
+    color: var(--main-color);
     cursor: pointer;
     display: none;
 }
@@ -103,9 +100,9 @@ section {
     display: flex;
     align-items: center;
     padding: 0 7%;
-    background: url('./images/Background_Portfolio.png') no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: var(--bg-color);
+    /* background-size: cover;
+    background-position: center; */
 }
 
 /* Contenido de Home - Section */
@@ -132,7 +129,7 @@ section {
     font-size: 2.8rem;
     font-weight:  700;
     color: transparent;
-    -webkit-text-stroke: 1.2px var(--third-text-color);
+    -webkit-text-stroke: .7px var(--main-color);
     letter-spacing: .2rem;
 }
 
@@ -255,7 +252,7 @@ color: var(--main-color);
     width: 100%;
 }
 
-/* Efect to background */
+/* Efect to background
 .home_ImageHover {
     position: absolute;
     top: 0;
@@ -269,281 +266,31 @@ color: var(--main-color);
 .home_ImageHover:hover {
     background: var(--bg-color);
     opacity: .8;
-}
-
+} */
 
 
 /* TITLES */
 
 .heading {
-    font-size: 5rem;
-    margin-bottom: 2rem;
+    font-size: 3.6rem;
+    margin-bottom: 6rem;
     text-align: center;
 }
 
 span {
-    color: var(--third-text-color);
-}
-
-
-/* EDUCATION SECTION DESIGN */
-
-.education {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: auto;
-    padding-bottom: 7rem;
     color: var(--second-text-color);
-}
-
-.education .education_Row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5rem;
-    padding-top: 3rem;
-}
-
-.education_Row .education_Column {
-    flex: 1 1 40rem;    
-}
-
-.education_Row .education_Column .title {
-    font-size: 2.5rem;
-    margin: 0 0 1.5rem 2rem;
-    letter-spacing: .1rem;
-    
-}
-
-.education_Column .education_Box {
-    border-left: .2rem solid var(--third-text-color);
-}
-
-.education_Box .education_Content {
-    position: relative;
-    padding-left: 2rem;
-}
-
-/* Point Efect */
-.education_Box .education_Content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -1.1rem;
-    width: 1rem;
-    height: 2rem;
-    background: var(--third-text-color);
-    border-radius: 20%;
-}
-
-.education_Content .content {
-    position: relative;
-    padding: 1.5rem;
-    border: .2rem solid var(--bg-color);
-    border-radius: .6rem;
-    margin-bottom: 2rem;
-    overflow: hidden;
-}
-
-
-/* Efect content */
-.education_Content .content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--fourth-bg-color); 
-    z-index: -1;
-    transition: .5s;
-}
-
-.education_Content .content:hover::before {
-    width: 100%;
-}
-
-.education_Content .content .year {
-    font-size: 1.5rem;
-    padding-bottom: .5rem;    
-}
-
-.education_Content .content .year i {
-    padding-right: .5rem;
-}
-
-.education_Content .content h3 {
-    font-size: 2rem;
-}
-
-.education_Content .content p {
-    font-size: 1.6rem;
-}
-
-
-/* SKILLS SECTION DESIGN */
-.skills {
-    min-height: auto;
-    padding-bottom: 7rem;
-    background: var(--bg-color);
-}
-
-.skills .skills_Row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5rem;
-}
-
-.skills_Row .skills_Column {
-    flex: 1 1 40rem;
-}
-
-.skills_Column .title {
-    font-size: 2.5rem;
-    margin: 0 0 1.5rem;
-    letter-spacing: .1rem;
-}
-
-.skills_Box .skills_Content {
-    position: relative;
-    border: .2rem solid var(--main-color);
-    border-radius: .6rem;
-    padding: .5rem 1.5rem;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.skills_Box .skills_Content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--third-bg-color);
-    z-index: -1;
-    transition: .5s;
-}
-
-.skills_Box .skills_Content:hover::before {
-    width: 100%;
-} 
-
-.skills_Content .progress {
-    padding: 1rem 0;
-}
-
-.skills_Content .progress h3 {
-    font-size: 1.7rem;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 3rem;
-}
-
-/* Efectos para logos de cada education */
-.skills_Content .progress #html5 {
-    margin-block-end: auto;
-    margin-inline-end: auto;
-    margin-left: -7.8rem;
-    font-size: 2.4rem;
-
-}
-
-.skills_Content .progress #css3 {
-    margin-block-end: auto;
-    margin-inline-end: auto;
-    margin-left: -6.6rem;
-    font-size: 2.4rem;
-}
-
-.skills_Content .progress #javas {
-    margin-block-end: auto;
-    margin-inline-end: auto;
-    margin-left: -12.6rem;
-    font-size: 2.4rem;
-
-}
-
-.skills_Content .progress #git {
-    margin-block-end: auto;
-    margin-inline-end: auto;
-    margin-left: -5.9rem;
-    font-size: 2.4rem;
-
-}
-
-.skills_Content .progress #github {
-    margin-block-end: auto;
-    margin-inline-end: auto;
-    margin-left: -9.1rem;
-    font-size: 2.4rem;
-}
-
-.skills_Content .progress #cmd {
-    margin-block-end: auto;
-    margin-inline-end: auto;
-    margin-left: -22.7rem;
-    font-size: 2.4rem;
-}
-
-.skills_Content .progress h3 span {
-    color: var(--text-color);
-}
-
-/* Creacion de la barra de carga que tendra cada skill*/
-.skills_Content .progress .bar {
-    height: 2.5rem;
-    border-radius: .6rem;
-    border: .2rem solid var(--main-color);
-    padding: .5rem;
-    margin: 1rem 0;
-}
-
-/* Creacion del contenido o relleno de cada barra del skill */
-.skills_Content .progress .bar span {
-    display: block;
-    height: 100%;
-    border-radius: .3rem;
-    background: var(--main-color);
-}
-
-/*Efectos para personalizar el relleno de cada skill*/
-.skills_Column:nth-child(1)  .skills_Content .progress:nth-child(1) .bar span {
-    width:90%;
-}
-
-.skills_Column:nth-child(1)  .skills_Content .progress:nth-child(2) .bar span {
-    width: 80%;
-}
-
-.skills_Column:nth-child(1)  .skills_Content .progress:nth-child(3) .bar span {
-    width: 50%;
-}
-
-.skills_Column:nth-child(1)  .skills_Content .progress:nth-child(4) .bar span {
-    width: 75%;
-}
-
-.skills_Column:nth-child(1)  .skills_Content .progress:nth-child(5) .bar span {
-    width: 80%;
-}
-
-.skills_Column:nth-child(1)  .skills_Content .progress:nth-child(6) .bar span {
-    width: 75%;
 }
 
 
 /* ABOUT SECTION DESIGN */
-
 .about {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-    color: var(--second-text-color);
-    padding-bottom: 7rem;
+    color: var(--text-color);
+    padding-bottom: 6rem;
 }
 
 /* About Image */
@@ -560,8 +307,6 @@ span {
 
 .about_Image img {
     width: 100%;
-    /*border-radius: 50%;
-    border: .2rem solid var(--main-color);*/
 }
 
 /* esto es para un circulo alrededor de la foto de about
@@ -573,8 +318,8 @@ span {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border-top: .2rem solid var(--second-bg-color);
-    border-bottom: .2rem solid var(--second-bg-color);
+    border-top: .2rem solid var(--second-text-color);
+    border-bottom: .2rem solid var(--second-text-color);
     border-left: .2rem solid var(--main-color);
     border-right: .2rem solid var(--main-color);
 }  */
@@ -607,11 +352,143 @@ span {
 }
 
 
+/* EDUCATION SECTION DESIGN */
+
+.education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 6rem;
+    color: var(--text-color);
+}
+
+.education .education_Row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    padding-top: 3rem;
+}
+
+.education_Row .education_Column {
+    flex: 1 1 40rem; 
+      
+}
+
+.education_Row .education_Column .title {
+    font-size: 2.6rem;
+    margin: 0 0 1.5rem 2rem;
+    letter-spacing: .1rem;
+    
+}
+
+.education_Column .education_Box {
+    border-left: .1rem solid var(--second-text-color);
+
+}
+
+.education_Box .education_Content {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.education_Content .content {
+    position: relative;
+    padding: 1.5rem;
+    border: .1rem solid var(--second-text-color);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    background: var(--second-bg-color);
+}
+
+.education_Content .content .year {
+    font-size: 1.3rem;
+    padding-bottom: .5rem;    
+}
+
+.education_Content .content .year i {
+    padding-right: .5rem;
+}
+
+.education_Content .content h3 {
+    font-size: 1.6rem;
+}
+
+.education_Content .content p {
+    font-size: 1.4rem;
+}
+
+
+/* SKILLS SECTION DESIGN */
+.skills {
+    min-height: auto;
+    padding-bottom: 6rem;
+    background: var(--bg-color);
+}
+
+.skills .skills_Row {
+    display: flexbox;
+    padding-top: 3rem;
+}
+
+.skills_Row .title {
+    display: flex;
+    font-size: 2.6rem;
+    margin-top: -1rem;
+    margin-bottom: 8rem;
+    letter-spacing: .1rem;
+}
+
+.skills_Row .skills_Column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.skills_Box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.skills_Content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12rem;
+    height: 12rem;
+    border: .1rem solid var(--second-text-color);
+    border-radius: .6rem;
+}
+
+.skills_Content img{
+    display: flex; 
+    justify-items: center; 
+    align-items: center;
+    cursor: pointer;  
+    height: 9rem;
+    width: 9rem;
+    filter: grayscale(80%) opacity(.5);
+      
+}
+
+.skills_Content img:hover {
+    filter: saturate(90%);
+    transition: 3s ease-in-out;
+      
+}
+
+
+
 /* CONTACT SECTION DESIGN */
 .contact {
     min-height: auto;
-    padding-bottom: 7rem;
-    background: var(--bg-color);
+    padding-bottom: 6rem;
 }
 
 .contact form {
@@ -639,10 +516,10 @@ span {
     height: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
-    color: var(--text-color);
-    background: transparent;
+    color: var(--second-text-color);
+    background: var(--third-bg-color);
     border-radius: .6rem;
-    border: .2rem solid var(--main-color);
+    border: .1rem solid var(--second-text-color);
 }
 
 .contact form .input_Box .input_Field input::placeholder, 
@@ -701,7 +578,7 @@ hay que quitar el background de about.
 .footer .footer_Text a {
     font-size: 1.2rem;
     letter-spacing: .1rem;
-    color: var(--third-text-color)
+    color: var(--main-color)
 
 }
 
@@ -911,4 +788,3 @@ hay que quitar el background de about.
     }
 
 }
-/* 01:40:00*/
