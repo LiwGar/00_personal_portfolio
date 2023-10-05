@@ -139,7 +139,7 @@ color: var(--main-color);
 
 /* P del Contenido del Home */
 .home_Content p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin: 1rem 0 2rem; 
 }
 
@@ -270,7 +270,6 @@ color: var(--main-color);
 
 
 /* TITLES */
-
 .heading {
     font-size: 3.6rem;
     margin-bottom: 6rem;
@@ -293,12 +292,16 @@ span {
     padding-bottom: 6rem;
 }
 
+.about h2 {
+    margin-bottom: 8rem;
+}
+
 /* About Image */
 .about_Image {
     position: relative;
     width: 30rem;
     height: 30rem;
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -353,7 +356,6 @@ span {
 
 
 /* EDUCATION SECTION DESIGN */
-
 .education {
     display: flex;
     justify-content: center;
@@ -372,15 +374,13 @@ span {
 }
 
 .education_Row .education_Column {
-    flex: 1 1 40rem; 
-      
+    flex: 1 1 40rem;  
 }
 
 .education_Row .education_Column .title {
     font-size: 2.6rem;
     margin: 0 0 1.5rem 2rem;
     letter-spacing: .1rem;
-    
 }
 
 .education_Column .education_Box {
@@ -401,6 +401,12 @@ span {
     margin-bottom: 2rem;
     overflow: hidden;
     background: var(--second-bg-color);
+    filter: opacity(.6) contrast(175%) brightness(103%);
+}
+
+.education .content:hover {
+    filter: saturate(90%) contrast(175%);
+    
 }
 
 .education_Content .content .year {
@@ -428,16 +434,15 @@ span {
     background: var(--bg-color);
 }
 
-.skills .skills_Row {
-    display: flexbox;
-    padding-top: 3rem;
+.skills h2 {
+    margin-bottom: 8rem;
 }
 
 .skills_Row .title {
     display: flex;
     font-size: 2.6rem;
-    margin-top: -1rem;
     margin-bottom: 8rem;
+    margin-left: 2rem;
     letter-spacing: .1rem;
 }
 
@@ -473,15 +478,66 @@ span {
     cursor: pointer;  
     height: 9rem;
     width: 9rem;
-    filter: grayscale(80%) opacity(.5);
-      
+    filter: grayscale(80%) opacity(.6) contrast(175%) brightness(103%);
 }
 
 .skills_Content img:hover {
     filter: saturate(90%);
-    transition: 3s ease-in-out;
-      
+    transition: 3s ease-in-out;  
 }
+
+
+/* PROJECTS SECTION DESIGN */
+.projects {
+    min-height: auto;
+    padding-bottom: 6rem;  
+}
+
+.projects h2 {
+    margin-bottom: 14rem;
+}
+
+.projects_Row .projects_Column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects_Box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+    margin-right: 0;
+}
+
+.projects_Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.projects_Content img{
+    cursor: pointer;  
+    width: 100%;
+    filter: opacity(.6) brightness(103%);
+}
+
+.projects_Content img:hover {
+    filter: saturate(90%);
+    transition: 3s ease-in-out;  
+}
+
+.projects_Content h3 {
+    font-size: 1.6rem;
+}
+
+
 
 
 
@@ -495,6 +551,10 @@ span {
     max-width: 70rem;
     margin: 0 auto;
     text-align: center;
+}
+
+.contact h2{
+    margin-bottom: 8rem;
 }
 
 .contact form .input_Box {
@@ -515,8 +575,8 @@ span {
     width: 100%;
     height: 100%;
     padding: 1.5rem;
-    font-size: 1.6rem;
-    color: var(--second-text-color);
+    font-size: 1.4rem;
+    color: var(--text-color);
     background: var(--third-bg-color);
     border-radius: .6rem;
     border: .1rem solid var(--second-text-color);
@@ -524,7 +584,7 @@ span {
 
 .contact form .input_Box .input_Field input::placeholder, 
 .contact form .textarea_Field textarea::placeholder {
-    color: var(--fourth-text-color);
+    color: var(--second-text-color);
 }
 
 /* Efecto para espacios de texto*/  /* para que funciona 
@@ -624,7 +684,6 @@ hay que quitar el background de about.
 
 
 /* RESPONSIVE DESIGN */
-
 @media (min-width: 540) {
     .education .education_Row .education_Column .education_Box {
         column-count: 2;
@@ -638,6 +697,17 @@ hay que quitar el background de about.
 
     .home_ImageHover {
         display: none;
+    }
+    .skills_Row .title {
+        margin-left: 2rem;
+    }
+    .projects_Box{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin: 2rem;
     }
 }
 
@@ -656,6 +726,27 @@ hay que quitar el background de about.
 
     .home {
         padding: 0 4%
+    }
+
+    .skills_Row .title {
+        margin-left: 2rem;
+    }
+
+    .skills_Box{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .projects_Box{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin: 2rem;
     }
 
     .footer {
@@ -719,6 +810,7 @@ hay que quitar el background de about.
 @media (max-width: 462px) {
     .home {
         justify-content: center;
+        margin-left: 2rem;
     }
 
     .home_Content {
@@ -727,11 +819,13 @@ hay que quitar el background de about.
         flex-direction: column;
         text-align: center;
         margin-top: -4rem;
+        
     }
 
     .home_Content p {
         text-align: justify;
         margin-top: 2rem;
+        
     }
 
     .home_Content h1 {
@@ -746,11 +840,40 @@ hay que quitar el background de about.
         margin-top: 2rem;
     }
 
+    .about {
+        margin-left: 2rem;
+    }
+
     .education {
         padding: 10rem 4% 5rem 5%;
     }
 
-    .contact form .input_Box .input_Field {
+    .skills_Row .title {
+        margin-left: 2rem;
+    }
+
+    .skills_Box{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .projects_Box{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin: 2rem;
+    }
+
+    .contact form {
+        margin: 1rem;
+    }
+
+    .contact form .input_Box .input_Field   {
         width: 100%;
     }
     .footer {
@@ -786,5 +909,4 @@ hay que quitar el background de about.
     .footer_Text {
         text-align: center;
     }
-
 }
