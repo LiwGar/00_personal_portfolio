@@ -29,8 +29,8 @@ window.onscroll = () => {
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             });
         }
-
     });
+
 
     //sticky header //se agrega en el css como header.sticky
     let header = document.querySelector('header');
@@ -41,3 +41,21 @@ window.onscroll = () => {
     menuIcon.classList.remove('bx-x');
     navBar.classList.remove('active');
 }
+
+function revealFunction () {
+    window.sr = ScrollReveal({
+        duration: 1500,
+        distance: '100px',
+        easing: 'ease-out'
+    });
+
+    sr.reveal('.reveal-bottom', {origin: 'bottom', reset: false});
+    sr.reveal('.reveal-left', {origin: 'left', reset: false});
+    sr.reveal('.reveal-right', {origin: 'right', reset: false});
+    sr.reveal('.reveal-top', {origin: 'top', reset: false});
+    sr.reveal('.reveal-reset-true', {origin: 'bottom', reset: true});
+}
+
+window.addEventListener('load', () => {
+    revealFunction();
+})

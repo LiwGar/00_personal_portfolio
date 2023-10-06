@@ -53,9 +53,8 @@ body {
 /* //scroll sections //sticky header */
 .header.sticky {
     background: var(--second-bg-color);
+    box-shadow: 0 .5rem 1rem #000001;
 }
-
-
 
 /* Logo Header */
 .header_Logo {
@@ -98,34 +97,48 @@ section {
 /* Home - Section*/
 .home {
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 0 7%;
-    background: var(--bg-color);
-    /* background-size: cover;
-    background-position: center; */
+    background: transparent;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Contenido de Home - Section */
 .home_Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     max-width: 60rem;
     z-index: 99;
 }
 
 /* H1 del Contenido del Home */
 .home_Content h1 {
+    display: flex;
+    justify-content: center;
     font-size: 4.6rem;
     font-weight: 700;
     line-height: 1.0;
 }
 
+.home_Content :nth-child(1) {
+    color: var(--main-color);
+}
+    
+
 /* Text Animate (section)*/
 .home_Content .text_Animate {
     position: relative;
-    width: 32.8rem;
+    /* width: 32.8rem; */
 }
 
 /* H3 del Contenido del Home */
 .home_Content .text_Animate h3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
     font-size: 2.8rem;
     font-weight:  700;
     color: transparent;
@@ -133,12 +146,11 @@ section {
     letter-spacing: .2rem;
 }
 
-.home_Content h1::first-line {
-color: var(--main-color);
-}
 
 /* P del Contenido del Home */
 .home_Content p {
+    display: flex;
+    justify-content: center;
     font-size: 1.6rem;
     margin: 1rem 0 2rem; 
 }
@@ -208,11 +220,13 @@ color: var(--main-color);
 
 /* Caja de Botones de Socials*/
 .home_Socials {
+    display: flex;
+    justify-content: space-between;
     position: absolute;
     bottom: 4rem;
     width: 170px;
-    display: flex;
-    justify-content: space-between;
+    
+    
 }
 
 .home_Socials a {
@@ -385,7 +399,6 @@ span {
 
 .education_Column .education_Box {
     border-left: .1rem solid var(--second-text-color);
-
 }
 
 .education_Box .education_Content {
@@ -405,7 +418,7 @@ span {
 }
 
 .education .content:hover {
-    filter: saturate(90%) contrast(175%);
+    filter: saturate(80%) contrast(145%);
     
 }
 
@@ -505,11 +518,11 @@ span {
 
 .projects_Box {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    width: 100%;
+    width: 50%;
     margin-right: 0;
 }
 
@@ -529,16 +542,14 @@ span {
 }
 
 .projects_Content img:hover {
-    filter: saturate(90%);
+    filter: saturate(80%);
     transition: 3s ease-in-out;  
 }
 
 .projects_Content h3 {
+    font-weight: 600;
     font-size: 1.6rem;
 }
-
-
-
 
 
 /* CONTACT SECTION DESIGN */
@@ -588,8 +599,8 @@ span {
 }
 
 /* Efecto para espacios de texto*/  /* para que funciona 
-hay que quitar el background de about.
-.contact form .focus {
+hay que quitar el background de about.*/
+/* .contact form .focus {
     position: absolute;
     top: 0;
     left: 0;

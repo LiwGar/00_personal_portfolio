@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I'm  Wil | One Way!</title>
     <link href="style.css" rel="stylesheet">
-
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -30,17 +29,16 @@
     </header>
     
     <!-- home section design -->
-    <section id="home" class="home" alt="home">
+    <section id="home" class="home " alt="home" style="background-image: url(./images/Background_Portfolio_2.png)">
         <div class="home_Content" alt="home_Content">
-            <h1>Hi, <br> I'm Wil Garcia</h1>
+            <h1 class="reveal-top">Hi,</h1>
+            <h1 class="reveal-left">I'm Wil Garcia</h1>
 
             <div class="text_Animate">
-                <h3>Frontend Developer</h3>
+                <h3 class="reveal-right">Frontend Developer</h3>
             </div>
-            <p>Frontend developer who focuses on writing
-            clean, elegant and <br> efficient code. <br> 
-            "The only way to do great work is to love what 
-            you do." <br>- Steve Jobs. </p>
+            <p>"The only way to do great work is to love what 
+            you do." Steve Jobs. </p>
         </div>
 
         <div class="home_Socials" alt="home_Socials">
@@ -56,7 +54,7 @@
     <section id="about" class="about" alt="about">
         <h2 class="heading">About <span>Me</span></h2>
 
-        <div class="about_Image">
+        <div class="about_Image reveal-bottom">
             <img src="./images/About.png" alt="image_aboutImage">
             <!-- <span class="circle_Spin"></span> -->
         </div>
@@ -215,7 +213,7 @@
                 
                 <div class="skills_Column">
                     
-                    <div class="skills_Box">
+                    <div class="skills_Box reveal-reset-true">
 
                         <div class="skills_Content">
                             <a class="ubuntu_logo" alt="ubuntu"  href="https://ubuntu.com/" target="_blank" rel="noreferrer" ><img src="https://cdn.worldvectorlogo.com/logos/ubuntu-4.svg"></a>
@@ -276,20 +274,10 @@
                       
             <div class="projects_Column">
                 
-                <div class="projects_Box">
+                <div class="projects_Box reveal-reset-true">
 
                     <div class="projects_Content">
                         <a class="shopstr_img" alt="ubuntu"  href="https://liwgar.github.io/react-curse-vite/" target="_blank" rel="noreferrer" ><img src="./images/Shopstr.png"></a>
-                        <h3>E-Comerce, ShopStr </h3>
-                    </div>
-
-                    <div class="projects_Content">
-                        <a class="landing_img" alt="git"  href="https://liwgar.github.io/curso_asincro_js/" target="_blank" rel="noreferrer" ><img src="./images/Landing.png"></a>
-                        <h3>A&B Landing Page</h3>
-                    </div>
-                    
-                    <div class="projects_Content">
-                        <a class="shopstr_img" alt="github"  href="https://liwgar.github.io/react-curse-vite/" target="_blank" rel="noreferrer" ><img class="github_logo" src="./images/Shopstr.png"></a>
                         <h3>E-Comerce, ShopStr </h3>
                     </div>
 
@@ -361,6 +349,8 @@
     </footer>
 
     <script src="./script.js" ></script>
+    <!-- Scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 
 </body>
 
