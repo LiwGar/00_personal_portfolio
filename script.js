@@ -45,7 +45,7 @@ window.onscroll = () => {
 function revealFunction () {
     window.sr = ScrollReveal({
         duration: 1500,
-        distance: '100px',
+        distance: '150px',
         easing: 'ease-out'
     });
 
@@ -53,7 +53,7 @@ function revealFunction () {
     sr.reveal('.reveal-left', {origin: 'left', reset: false});
     sr.reveal('.reveal-right', {origin: 'right', reset: false});
     sr.reveal('.reveal-top', {origin: 'top', reset: false});
-    sr.reveal('.reveal-reset-true', {origin: 'bottom', reset: true});
+    sr.reveal('.reveal-reset-true', {origin: 'right', reset: true});
 }
 
 window.addEventListener('load', () => {

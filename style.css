@@ -444,7 +444,9 @@ span {
 .skills {
     min-height: auto;
     padding-bottom: 6rem;
-    background: var(--bg-color);
+    background: transparent;
+    background-size: cover;
+    background-position: center;
 }
 
 .skills h2 {
@@ -502,37 +504,43 @@ span {
 
 /* PROJECTS SECTION DESIGN */
 .projects {
-    min-height: auto;
     padding-bottom: 6rem;  
 }
 
 .projects h2 {
-    margin-bottom: 14rem;
+    margin-bottom: 10rem;
 }
 
-.projects_Row .projects_Column {
+.projects_Row {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
 }
 
-.projects_Box {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    width: 50%;
-    margin-right: 0;
+.projects_Row::-webkit-scrollbar{
+    width: 1rem;
+    background: var(--third-bg-color);
 }
 
-.projects_Content {
+.projects_Row::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+.projects_Box{
+     display: flex;
+     height: 100%;
+ }
+
+.projects_Box .projects_Content{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    
+    justify-content: center;
+    width: 280px;
+    height: 480px;
+   
+    margin-right: 3rem;
 }
 
 .projects_Content img{
@@ -547,6 +555,7 @@ span {
 }
 
 .projects_Content h3 {
+    
     font-weight: 600;
     font-size: 1.6rem;
 }
@@ -695,36 +704,29 @@ hay que quitar el background de about.*/
 
 
 /* RESPONSIVE DESIGN */
-@media (min-width: 540) {
-    .education .education_Row .education_Column .education_Box {
-        column-count: 2;
-    }
-}
-
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
     }
-
+    .home {
+        background-size: cover;
+        background-position: center;
+    }
     .home_ImageHover {
         display: none;
     }
     .skills_Row .title {
         margin-left: 2rem;
     }
-    .projects_Box{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        margin: 2rem;
-    }
 }
 
 @media (max-width: 994px) {
     .header {
         padding: 2rem 4%;
+    }
+    .home {
+        background-size: cover;
+        background-position: center;
     }
 
     .home_ImageHover {
@@ -751,15 +753,6 @@ hay que quitar el background de about.*/
         gap: 2rem;
     }
 
-    .projects_Box{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        margin: 2rem;
-    }
-
     .footer {
         padding: 2rem 4%;
     }
@@ -768,6 +761,11 @@ hay que quitar el background de about.*/
 @media (max-width: 768px) {
     .header {
         background: var(--bg-color);
+    }
+
+    .home {
+        background-size: cover;
+        background-position: center;
     }
 
     #menu_Icon {
@@ -808,6 +806,11 @@ hay que quitar el background de about.*/
         font-size: 50%;
     }
 
+    .home {
+        background-size: cover;
+        background-position: center;
+    }
+
     .home_Socials {
         width: 160px;
     }
@@ -821,7 +824,9 @@ hay que quitar el background de about.*/
 @media (max-width: 462px) {
     .home {
         justify-content: center;
-        margin-left: 2rem;
+        background-size: cover;
+        background-position: center;
+        
     }
 
     .home_Content {
@@ -869,15 +874,6 @@ hay que quitar el background de about.*/
         justify-content: center;
         align-items: center;
         gap: 2rem;
-    }
-
-    .projects_Box{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        margin: 2rem;
     }
 
     .contact form {
