@@ -261,22 +261,6 @@ section {
     width: 100%;
 }
 
-/* Efect to background
-.home_ImageHover {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 58%;
-    height: 100%;
-    background: transparent; 
-    transition: 3s;
-}
-
-.home_ImageHover:hover {
-    background: var(--bg-color);
-    opacity: .8;
-} */
-
 
 /* TITLES */
 .heading {
@@ -286,9 +270,8 @@ section {
 }
 
 span {
-    color: var(--second-text-color);
+    color: var(--main-color);
 }
-
 
 /* ABOUT SECTION DESIGN */
 .about {
@@ -363,82 +346,67 @@ span {
     color: var(--main-color);
 }
 
+/* PROJECTS SECTION DESIGN */
+.projects {
+    padding-bottom: 10rem;  
+}
 
-/* EDUCATION SECTION DESIGN */
-.education {
+.projects h2 {
+    margin-bottom: 10rem;
+}
+
+.projects_Row {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+
+.projects_Row::-webkit-scrollbar{
+    width: 1rem;
+    background: var(--third-bg-color);
+}
+
+.projects_Row::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+.projects_Box{
+     display: flex;
+     height: 100%;
+     gap: 6rem;
+ }
+
+.projects_Box .projects_Content{
+    display: flex;
     flex-direction: column;
-    min-height: auto;
-    padding-bottom: 6rem;
-    color: var(--text-color);
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 480px;
 }
 
-.education .education_Row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5rem;
-    padding-top: 3rem;
+.projects_Content img{
+    cursor: pointer;  
+    width: 100%;
+    filter: opacity(.6) brightness(103%);
 }
 
-.education_Row .education_Column {
-    flex: 1 1 40rem;  
+.projects_Content img:hover {
+    filter: saturate(80%);
+    transition: 3s ease-in-out;  
 }
 
-.education_Row .education_Column .title {
-    font-size: 2.6rem;
-    margin: 0 0 1.5rem 2rem;
-    letter-spacing: .1rem;
-}
-
-.education_Column .education_Box {
-    border-left: .1rem solid var(--second-text-color);
-}
-
-.education_Box .education_Content {
-    position: relative;
-    padding-left: 2rem;
-}
-
-.education_Content .content {
-    position: relative;
-    padding: 1.5rem;
-    border: .1rem solid var(--second-text-color);
-    border-radius: .6rem;
-    margin-bottom: 2rem;
-    overflow: hidden;
-    background: var(--second-bg-color);
-    filter: opacity(.6) contrast(175%) brightness(103%);
-}
-
-.education .content:hover {
-    filter: saturate(80%) contrast(145%);
-    
-}
-
-.education_Content .content .year {
-    font-size: 1.3rem;
-    padding-bottom: .5rem;    
-}
-
-.education_Content .content .year i {
-    padding-right: .5rem;
-}
-
-.education_Content .content h3 {
+.projects_Content h3 {
+    color: var(--main-color);
+    font-weight: 500;
     font-size: 1.6rem;
 }
-
-.education_Content .content p {
-    font-size: 1.4rem;
-}
-
 
 /* SKILLS SECTION DESIGN */
 .skills {
     min-height: auto;
-    padding-bottom: 6rem;
+    padding-bottom: 10rem;
     background: transparent;
     background-size: cover;
     background-position: center;
@@ -495,64 +463,87 @@ span {
     transition: 3s ease-in-out;  
 }
 
-
-/* PROJECTS SECTION DESIGN */
-.projects {
-    padding-bottom: 6rem;  
+/* EDUCATION SECTION DESIGN */
+.education {
+    padding-bottom: 6rem;
 }
 
-.projects h2 {
+.education h2 {
     margin-bottom: 10rem;
 }
 
-.projects_Row {
+.education_Row {
     display: flex;
     height: 100%;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
 }
 
-.projects_Row::-webkit-scrollbar{
+.education_Row::-webkit-scrollbar {
     width: 1rem;
     background: var(--third-bg-color);
 }
 
-.projects_Row::-webkit-scrollbar-thumb {
+.education_Row::-webkit-scrollbar-thumb {
     background: var(--main-color);
 }
 
-.projects_Box{
-     display: flex;
-     height: 100%;
- }
+.education .title {
+    font-size: 2.6rem;
+    color: var(--second-text-color);
+    margin: 0 0 1.5rem 2rem;
+    letter-spacing: .1rem;
+}
 
-.projects_Box .projects_Content{
+.education_Box{
+    display: flex;
+    height: 100%;
+    gap:3rem;
+}
+
+.education_Box .education_Content{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 280px;
-    height: 480px;
-    margin-right: 3rem;
+    height: 100%;
 }
 
-.projects_Content img{
-    cursor: pointer;  
-    width: 100%;
-    filter: opacity(.6) brightness(103%);
+.education_Content .content {
+    position: relative;
+    padding: 1.5rem;
+    border: .1rem solid var(--main-color);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    background: var(--second-bg-color);
+    filter: opacity(.6) contrast(175%) brightness(103%);
 }
 
-.projects_Content img:hover {
-    filter: saturate(80%);
-    transition: 3s ease-in-out;  
+.education .content:hover {
+    filter: saturate(80%) contrast(145%);   
 }
 
-.projects_Content h3 {
-    
-    font-weight: 600;
+.education_Content .content .year {
+    font-size: 1.3rem;
+    padding-bottom: .5rem;    
+}
+
+.education_Content .content .year i {
+    padding-right: .5rem;
+}
+
+.education_Content .content h3 {
+    color: var(--main-color);
     font-size: 1.6rem;
+    font-weight: 600;
 }
 
+.education_Content .content p {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
 
 /* CONTACT SECTION DESIGN */
 .contact {
