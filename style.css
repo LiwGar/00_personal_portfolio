@@ -496,6 +496,7 @@ span {
     color: var(--second-text-color);
     margin: 0 0 1.5rem 2rem;
     letter-spacing: .1rem;
+    margin-bottom: 4rem;
 }
 
 .education_Box{
@@ -824,7 +825,8 @@ span {
     }
 
     .education {
-        padding: 10rem 4% 5rem 5%;
+        padding: 10rem 4% 0 5%;
+        padding-bottom: none;
     }
 
     .skills_Row .title {
