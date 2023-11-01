@@ -825,6 +825,7 @@ span {
     }
 
     .education {
+        height: fit-content;
         padding: 10rem 4% 0 5%;
         padding-bottom: none;
     }
@@ -842,7 +843,7 @@ span {
     }
 
     .contact {
-        padding-top: 0;
+        margin-top: -2rem;
     }
 
     .contact form {
