@@ -31,6 +31,7 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 
@@ -348,11 +349,12 @@ span {
 
 /* PROJECTS SECTION DESIGN */
 .projects {
+    margin-bottom: 4rem;
     padding-bottom: 10rem;  
 }
 
 .projects h2 {
-    margin-bottom: 10rem;
+    margin-bottom: 12rem;
 }
 
 .projects_Row {
@@ -383,7 +385,15 @@ span {
     align-items: center;
     justify-content: center;
     width: 280px;
-    height: 480px;
+    height: 600px;
+}
+
+.projects_Content h3 {
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 .projects_Content img{
@@ -397,12 +407,26 @@ span {
     transition: 3s ease-in-out;  
 }
 
-.projects_Content h3 {
-    color: var(--main-color);
-    font-weight: 600;
-    font-size: 1.6rem;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+.devTools_Container {
+    display: flex;
+    margin-top: 2.8rem;
+    margin-bottom: 10rem;
+    margin-left: 0;
+    gap: .5rem;
+}
+
+.devTools_Container img {
+    position: relative;
+    display: inline-flex;
+    align-items: center; 
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: .2rem solid var(--second-text-color);
+    border-radius: 50%;
+    font-size: 20px;
+    overflow: hidden;
+    filter: grayscale(80%) opacity(.6) contrast(175%) brightness(103%);
 }
 
 /* SKILLS SECTION DESIGN */
@@ -820,6 +844,14 @@ span {
         margin-top: 2rem;
     }
 
+    .projects {
+        margin-bottom: 4rem;
+    }
+
+    .projects_Box .projects_Content{
+        height: 600px;
+    }
+
     .about {
         margin-left: 2rem;
     }
@@ -881,6 +913,10 @@ span {
 
     .home_Content h1::first-line {
         color: var(--main-color);
+    }
+
+    .devTools_Container {
+        margin-bottom: 4rem;
     }
 
     .contact {
